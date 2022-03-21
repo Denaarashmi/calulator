@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="screen"></div>
+      <div onclick="takeInput('7')">7</div>
+      <div onclick="takeInput('8')">8</div>
+      <div onclick="takeInput('9')">9</div>
+      <div onclick="takeInput('*')">*</div>
+      <div onclick="takeInput('4')">4</div>
+      <div onclick="takeInput('5')">5</div>
+      <div onclick="takeInput('6')">6</div>
+      <div onclick="takeInput('/')">/</div>
+      <div onclick="takeInput('1')">1</div>
+      <div onclick="takeInput('2')">2</div>
+      <div onclick="takeInput('3')">3</div>
+      <div onclick="takeInput('+')">+</div>
+      <div onclick="takeInput('-')">-</div>
+      <div class="zero" onclick="takeInput('0')">0</div>
+      <div onclick="calculate('=')">=</div>
+    </div>
+    <script>
+      let initialValue = "";
+      let screenEle = document.getElementById("screen");
+      function takeInput(value) {
+        initialValue = value + initialValue;
+        screenEle.innerText = initialValue;
+        // console.log(initialValue);
+      }
+      function calculate() {
+        initialValue = eval(initialValue);
+        screenEle.innerText = initialValue;
+        // console.log(eval(initialValue));
+      }
+    </script>
+  </body>
+</html>

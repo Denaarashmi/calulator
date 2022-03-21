@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  background-color: rgb(80, 79, 79);
+  padding: 50px;
+  border-radius: 40px;
+  margin: 100px 450px;
+}
+.container > div {
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+.zero {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+#screen {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: 50px;
+}
